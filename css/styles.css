@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+title{
+    font-family: "Playfair Display",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    width: 100%;
+    min-height: 100vh;
+    background: url("../img/bg_header.png");
+    background-size: cover;
+    background-position: center;
+    padding-top: 40px;
+}
+
+header nav{
+    position: fixed;
+    width: 84%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul a{
+    color: #fff;
+    margin: 0 12px;  
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 20px; 
+}
+
+header ul a:hover{
+    border-bottom: 1px solid #ffffff;
+}
+
+#hero{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.btn {
+    --color: #000000;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+}
+
+.btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+}
+
+.btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn:hover {
+    color: var(--color2);
+}
+
+.btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+
+#hero h1{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 80px;
+}
+
+#hero h2{
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#hero h2 b{
+    font-size: 60px;
+    color: #DCBF85;
+    font-weight: 600;
+}
+
+
+#hero button{
+    background: #ffff;
+    color: #DCBF85;
+    padding: 10px 30px;
+    font-size: 28px;
+    border-radius: 8px;
+}
+/*>>>>>>>>>>>>>> Fondo <<<<<<<<<<<<<<<<<<<<<< */
+#Menu{
+    width: 100%;
+    padding: 120px 0 200px;
+    background: url("../img/bg_destinos.png");
+    background-size: cover;
+    background-position: center;
+    background-position-y: bottom;
+    text-align: center;
+}
+#Recomendados{
+    width: 100%;
+    padding: 120px 0 200px;
+    background: url("../img/bg_destinos.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+#Favoritos{
+    width: 100%;
+    padding: 120 0 200px;
+    background: url("../img/bg_destinos.png");
+    background-size:Cover;
+    background-position: center;
+    text-align: center;
+}
+/*>>>>>>>>>>>>>> Fondo <<<<<<<<<<<<<<<<<<<<<< */
+
+#Menu.fila{
+    display: flex;
+} 
+
+#Menu h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #DCBF85;
+    
+}
+
+#Menu p{
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#Menu .fila{
+    display: flex;
+    justify-content: center;
+}
+
+#Menu article{
+    margin: 20px 40px;
+    position: relative;
+    background: #ffff;
+    border-radius: 0px 0px 20px 20px;
+    padding: 0%;
+}
+
+
+#Menu article h3{
+    position: absolute;
+    top: 120px;
+    color: yellow;
+    width: 100%;
+    text-align: center;
+}
+
+
+#Recomendados h2{
+    color: #DCBF85;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+#Recomendados .fila{
+    display: flex;
+    justify-content: center;
+} 
+#Recomendados .img{
+    margin: 100px;
+    padding: 1px; 
+    } 
+
+#Recomendados article{
+    margin: 0px 0px;
+    color: #fff;
+}
+
+#Recomendados h3{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#·--------------------
+
+#Recomendados .Recomendados_opciones :hover {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f200;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff00;
+    transition: all 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+
+#Recomendados .Recomendados_opciones src {
+    width: 48px;
+    fill: #f00b0b;
+    transition: all 1.6s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+
+#Recomendados .Recomendados_opciones :hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0);    
+}
+
+#Recomendados .Recomendados_opciones .contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(242, 242, 242, 0);
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+
+#Recomendados .Recomendados_opciones :hover .contenido {
+    transform: rotateX(0deg);
+}
+
+#Recomendados .titulo {
+    margin: 0; 
+    font-size: 24px;
+    color: #DCBF85;
+    font-weight: 700;
+}
+
+#Recomendados src {
+    scale: 0;
+}
+
+#Recomendados .texto {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+#Favoritos h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #DCBF85;
+    
+}
+
+#Favoritos h3{
+    font-size: 15;
+    color: #fff;
+}
+
+#Favoritos .img {
+    width: 27%; /* Ajusta el tamaño de las imágenes */
+    box-shadow: 0 0 35px #DCBF85; /* Ajusta el color y la intensidad del brillo */
+    border-radius: 10px; /* Opcional: redondea las esquinas */
+} 
+
+
+
+
+#Bebidas{
+    width: 100%;
+    padding: 120px 0 50px;
+    background: url("../img/bg_destinos.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+
+#Bebidas h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #DCBF85;
+    
+}
+
+#Bebidas p{
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#Bebidas .fila{
+    display: flex;
+    justify-content: center;
+}
+
+#Bebidas article{
+    margin: 20px 40px;
+    position: relative;
+    border-radius: 0px 0px 20px 20px;
+    padding: 0%;
+}
+
+
+#Bebidas article h3{
+    position: absolute;
+    top: 120px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+}
+
+#Postres{
+    width: 100%;
+    padding: 120px 0 50px;
+    background: url("../img/bg_destinos.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+#Postres h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #DCBF85;
+    
+}
+
+#Postres.fila{
+    display: flex;
+    justify-content: center;
+} 
+
+.card-postres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; 
+  }
+  
+  
+  .card-container {
+    perspective: 1000px; 
+  }
+  
+  .card-inner {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d; 
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg); 
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+  }
+  
+  .card-front {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(248, 246, 246, 0.1);
+  }
+  
+  .card-back {
+    background-color: #DCBF85;
+    transform: rotateY(180deg);
+  }
+
+#Reservas{
+    width: 100%;
+    padding: 120px 0 50px;
+    background: url("../img/bg_destinos.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+#Reservas p{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    
+}
+#Reservas h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #DCBF85;
+    
+}
+.card-inputGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; 
+  }
+  
+
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    max-width: 190px;
+    position: relative;
+  }
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #DCBF85;
+  }
+  
+  .inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #e8e8e800;
+  }
+  
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(17, 17, 17);
+  }
+
+
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+    .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #DCBF85;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+
+footer{
+    background: #000;
+    color: #DCBF85;
+    padding: 40px;
+    text-align: center;
+}
